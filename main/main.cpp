@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 
-#include "hashtable.cpp"
+#include "lib/hash_table.h"
 
 struct MyKeyHash {
   unsigned long operator()(const int& k) const { return k % 10; }

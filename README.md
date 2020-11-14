@@ -16,7 +16,7 @@
 # Core Data Structures, Algorithms, and Concepts
 | Data Structures        | Algorithms           | Concepts                |
 | ---------------------- | -------------------- | ----------------------- |
-| Linked Lists           | Breadth-First Search | Bit Manipulation        |
+| ~~Linked Lists~~       | Breadth-First Search | Bit Manipulation        |
 | Trees, Tries, & Graphs | Depth-Frist Search   | Memory (Stack vs. Heap) |
 | Stacks & Queues        | Binary Search        | Recursion               |
 | Heaps                  | Merge Sort           | Dynamic Programming     |
