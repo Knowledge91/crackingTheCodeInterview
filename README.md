@@ -12,6 +12,21 @@
         int *foo = new int[length];
         foo[0] # == 0
     ```
+- Use C++11 **smart pointers** instead of `new` and `delete`.
+    ```
+    #include <memory>
+
+    {
+        // Use make_shared when possible. foo ref count is 1.
+        std::shared_ptr<Foo> foo = std::make_shared<Foo>();
+        {
+            std::unique_ptr<Bar> bar = std::make_unique<Bar>();
+            // Initialize with copy constructor. Increments ref count of foo to 2.
+            std::shared_ptr<Foo> foo2(foo);
+        } // foo is deallocated here.
+        // bar has ref count 1 and points to an existing Foo instance.
+    } // bar is deallocated here.
+    ```
 
 # Core Data Structures, Algorithms, and Concepts
 | Data Structures                | Algorithms           | Concepts                |
