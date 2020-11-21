@@ -66,7 +66,6 @@ TEST_F(DoublyLinkedListTest, removeNodeAtIndex) {
 
 TEST_F(DoublyLinkedListTest, removeFirstNode) {
   list1_->remove(0);
-  list1_->log();
 
   EXPECT_EQ(list1_->get(0), node1_);
 }

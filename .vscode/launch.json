@@ -5,17 +5,36 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "clang++ - Build and debug active file",
+            "name": "Main",
             "type": "cppdbg",
-            "request": "launch",
-            "program": "${fileDirname}/${fileBasenameNoExtension}",
-            "args": [],
-            "stopAtEntry": false,
-            "cwd": "${workspaceFolder}",
-            "environment": [],
-            "externalConsole": false,
             "MIMode": "lldb",
-            "preLaunchTask": "C/C++: clang++ build active file"
-        }
+            "request": "launch",
+            "args": [],
+            "stopAtEntry": true,
+            "preLaunchTask": "Build Main (Debug)",
+            "cwd": "${workspaceFolder}/bazel-out/darwin-dbg/bin/main//main.runfiles/__main__",
+            "sourceFileMap": {
+                "/var/tmp/_bazel_drdirk/dce602cdc6fb64452e5d7bbb4387bb1b/execroot/__main__/": "${workspaceFolder}",
+            },
+            "program": "${workspaceFolder}/bazel-out/darwin-dbg/bin/main/main",
+            "externalConsole": false,
+            "environment": [],
+        },
+        {
+            "name": "Test",
+            "type": "cppdbg",
+            "MIMode": "lldb",
+            "request": "launch",
+            "args": [],
+            "stopAtEntry": true,
+            "preLaunchTask": "Test (Debug)",
+            "cwd": "${workspaceFolder}/bazel-bin/lib/tests.runfiles/__main__",
+            "sourceFileMap": {
+                "/var/tmp/_bazel_drdirk/dce602cdc6fb64452e5d7bbb4387bb1b/execroot/__main__/": "${workspaceFolder}",
+            },
+            "program": "${workspaceFolder}/bazel-bin/lib/tests.runfiles/__main__/lib/tests",
+            "externalConsole": false,
+            "environment": [],
+        },
     ]
 }
