@@ -5,6 +5,7 @@ cc_binary(
     srcs = ["main.cc"],
     deps = [
         "//arrays_and_strings",
+        "//linked_lists",
         "//lib",
     ],
 )
