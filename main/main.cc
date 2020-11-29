@@ -5,6 +5,7 @@
 #include "arrays_and_strings/check_permutation.h"
 #include "arrays_and_strings/is_unique.h"
 #include "arrays_and_strings/urlify.h"
+#include "linked_lists/delete_middle_node.h"
 #include "linked_lists/remove_dups.h"
 #include "linked_lists/return_kth_to_last.h"
 
@@ -30,9 +31,22 @@ int main() {
   // }
   // std::cout << std::endl;
 
-  std::forward_list<int> list = {1, 2, 3, 4, 5, 6, 7, 8, 9};
-  std::cout << *returnKthToLastRecursive(list, 4) << std::endl;
-  std::cout << *returnKthToLastIterative(list, 4) << std::endl;
+  // std::forward_list<int> list = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+  // std::cout << *returnKthToLastRecursive(list, 4) << std::endl;
+  // std::cout << *returnKthToLastIterative(list, 4) << std::endl;
+
+  DMNode *n = new DMNode(1);
+  DMNode *n2 = new DMNode(2);
+  DMNode *n3 = new DMNode(3);
+  n->next = n2;
+  n2->next = n3;
+  DMNode *x = n;
+  deleteMiddleNode(n2);
+  while (x) {
+    std::cout << x->val << ", ";
+    x = x->next;
+  }
+  std::cout << std::endl;
 
   return 1;
 }
