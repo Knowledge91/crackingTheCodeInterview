@@ -7,7 +7,7 @@ cc_library(
         exclude = ["*_test.cc"],
     ),
     hdrs = glob(["*.h"]),
-    visibility = ["//main:__pkg__"],
+    visibility = ["//main:__pkg__", "//stacks_and_queues:__pkg__"],
 )
 
 cc_test(

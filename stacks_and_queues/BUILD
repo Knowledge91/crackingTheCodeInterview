@@ -8,6 +8,7 @@ cc_library(
     ),
     hdrs = glob(["*.h"]),
     visibility = ["//main:__pkg__"],
+    deps = ["//lib"],
 )
 
 cc_test(
