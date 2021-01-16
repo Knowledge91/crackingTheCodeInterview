@@ -8,6 +8,7 @@ cc_library(
     ),
     hdrs = glob(["*.h"]),
     visibility = [
+        "//linked_lists:__pkg__",
         "//main:__pkg__",
         "//stacks_and_queues:__pkg__",
         "//trees_and_graphs:__pkg__",
