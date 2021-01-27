@@ -19,7 +19,6 @@ void insertNode(Node **node, std::vector<int>::iterator begin,
     insertNode(pN, begin, std::prev(mid));
   }
   if (std::distance(mid, end) > 0) {
-    std::vector<int>::iterator mc = mid;
     Node *newNode = new Node{};
     Node **pN = &((*node)->right);
     *pN = newNode;
